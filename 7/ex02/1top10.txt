@@ -1,0 +1,13 @@
+Showing nodes accounting for 910ms, 91.00% of 1000ms total
+Showing top 10 nodes out of 58
+      flat  flat%   sum%        cum   cum%
+     750ms 75.00% 75.00%      920ms 92.00%  7/ex02.minCoins
+      30ms  3.00% 78.00%      170ms 17.00%  runtime.growslice
+      30ms  3.00% 81.00%       30ms  3.00%  runtime.memclrNoHeapPointers
+      20ms  2.00% 83.00%       80ms  8.00%  runtime.mallocgc
+      20ms  2.00% 85.00%       20ms  2.00%  runtime.memmove
+      20ms  2.00% 87.00%       20ms  2.00%  runtime.typePointers.next
+      10ms  1.00% 88.00%       10ms  1.00%  gosave_systemstack_switch
+      10ms  1.00% 89.00%       10ms  1.00%  runtime.(*gcBitsArena).tryAlloc (inline)
+      10ms  1.00% 90.00%       10ms  1.00%  runtime.(*mspan).countAlloc
+      10ms  1.00% 91.00%       10ms  1.00%  runtime.(*pageCache).alloc

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="../css/main.css" type = "text/css">
+</head>
+<body>
+<header>
+    <img src="../css/images/amazing_logo.png" alt="Logo">
+    <h1>Welcome to My Blog</h1>
+    <p>Here you can find the latest articles on various topics.</p>
+</header>
+
+<section>
+    {{ if .Articles }}
+    <h2>Articles</h2>
+    <ul>
+        {{ range .Articles }}
+        <li>
+            <h3><a href="/article/{{.ID}}">{{.Title}}</a></h3>
+        </li>
+        {{ end }}
+    </ul>
+    {{ else }}
+    <p>No articles available</p>
+    {{ end }}
+</section>
+
+<nav>
+    <a href="?page=1">First</a>
+    {{ if gt .CurrentPage 1 }}
+    <a href="?page={{dec .CurrentPage}}">Previous</a>
+    {{ end }}
+    {{ if lt .CurrentPage .TotalPages }}
+    <a href="?page={{inc .CurrentPage}}">Next</a>
+    {{ end }}
+</nav>
+
+<footer>
+    <p>&copy; 2024 My Blog</p>
+</footer>
+</body>
+</html>

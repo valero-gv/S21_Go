@@ -1,0 +1,13 @@
+Showing nodes accounting for 10ms, 100% of 10ms total
+Showing top 10 nodes out of 16
+      flat  flat%   sum%        cum   cum%
+      10ms   100%   100%       10ms   100%  runtime/internal/atomic.(*UnsafePointer).StoreNoWB (inline)
+         0     0%   100%       10ms   100%  runtime.(*mcache).prepareForSweep
+         0     0%   100%       10ms   100%  runtime.(*mcache).releaseAll
+         0     0%   100%       10ms   100%  runtime.(*mcentral).uncacheSpan
+         0     0%   100%       10ms   100%  runtime.(*spanSet).push
+         0     0%   100%       10ms   100%  runtime.(*sweepLocked).sweep
+         0     0%   100%       10ms   100%  runtime.acquirep
+         0     0%   100%       10ms   100%  runtime.findRunnable
+         0     0%   100%       10ms   100%  runtime.gcstopm
+         0     0%   100%       10ms   100%  runtime.gopreempt_m

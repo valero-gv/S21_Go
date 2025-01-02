@@ -1,0 +1,13 @@
+Showing nodes accounting for 950ms, 100% of 950ms total
+Showing top 10 nodes out of 20
+      flat  flat%   sum%        cum   cum%
+     920ms 96.84% 96.84%      920ms 96.84%  7/ex02.minCoins2
+      10ms  1.05% 97.89%       10ms  1.05%  runtime.(*gcBits).bitp (inline)
+      10ms  1.05% 98.95%       10ms  1.05%  runtime.pidleget
+      10ms  1.05%   100%       10ms  1.05%  runtime.typePointers.nextFast (inline)
+         0     0%   100%      920ms 96.84%  7/ex02.BenchmarkMinCoins2
+         0     0%   100%       10ms  1.05%  runtime.(*mspan).markBitsForIndex (inline)
+         0     0%   100%       20ms  2.11%  runtime.gcBgMarkWorker
+         0     0%   100%       20ms  2.11%  runtime.gcBgMarkWorker.func2
+         0     0%   100%       20ms  2.11%  runtime.gcDrain
+         0     0%   100%       20ms  2.11%  runtime.gcDrainMarkWorkerDedicated (inline)

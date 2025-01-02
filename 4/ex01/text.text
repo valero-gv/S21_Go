@@ -1,0 +1,1 @@
+--tls-certificate /home/valero/Desktop/s21_Go/4/ex01/ca/candy.tld/cert.pem --tls-key /home/valero/Desktop/s21_Go/4/ex01/ca/candy.tld/key.pem --tls-ca /home/valero/Desktop/s21_Go/4/ex01/ca/minica.pem
