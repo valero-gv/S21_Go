@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+package warehouse;
+
+import "google/protobuf/duration.proto";
+
+option go_package = "pkg/service/api/warehousepb";
+
+message Node {
+  string node_uuid = 1;
+  string address = 2;
+}
+
+message PulseRequest {
+  Node requester = 1;
+}
+
+message PulseResponse {
+  Node respondent = 1;
+  string respondent_pulse_period = 3;
+}
+
+message GetKnownNodesResponse {
+  repeated Node nodes = 1;
+  google.protobuf.Duration pulse = 2;
+}
+
+message StorageStoreRequest {
+  string key = 1;
+  string value = 2;
+}
+
+message StorageLoadRequest {
+  string key = 1;
+}
+
+message StorageLoadResponse {
+  bool found = 1;
+  oneof value_present {
+    string value = 2;
+  }
+}
+
+message StorageDeleteRequest {
+  string key = 1;
+}
+
+message StorageDeleteResponse {
+  bool found = 1;
+}
+
+message ClientGetNodesResponse {
+  repeated Node nodes = 1;
+  Node leader = 2;
+}
+
+message FixMeshRequest {
+  int32 replica_factor = 1;
+}
+
+message ClientStorageStoreResponse {
+  int32 stored_replicas = 1;
+}
+
+message ClientStorageDeleteResponse {
+  int32 deleted_replicas = 1;
+}

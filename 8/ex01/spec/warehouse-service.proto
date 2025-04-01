@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package warehouse;
+
+import "spec/warehouse.proto";
+import "google/protobuf/empty.proto";
+
+option go_package = "pkg/service/api/warehousepb";
+
+service Warehouse {
+  rpc GetKnownNodes(google.protobuf.Empty) returns (GetKnownNodesResponse);
+  rpc PulseNodeToNode(PulseRequest) returns (PulseResponse);
+
+  rpc StorageStore(StorageStoreRequest) returns (google.protobuf.Empty);
+  rpc StorageLoad(StorageLoadRequest) returns (StorageLoadResponse);
+  rpc StorageDelete(StorageDeleteRequest) returns (StorageDeleteResponse);
+}
